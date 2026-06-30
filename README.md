@@ -108,17 +108,6 @@ CONNECTING ------------> CONNECTED (normal)
                STREAMING (resume)
 `
 
-## Testing
-
-`ash
-# Check server logs for protocol compliance
-curl -s http://localhost:4747/log | python3 -m json.tool
-
-# Expected verdicts:
-# "ok" - correct PONG, TOOL_ACK, RESUME
-# "violation" - missed PONG, late TOOL_ACK
-# "unexpected" - valid but out-of-context
-`
 
 ## Trigger Keywords
 
